@@ -11,14 +11,12 @@ export class SlotsComponent {
   }
 
   ngOnInit(){
-    this.SlotsList
+    this.SlotsList()
   }
   SlotsList(){
     this.slots = this.slotsService.listSlot().subscribe(slots =>{
       this.slots = slots
       console.log(this.slots)
-    }
-
-      )
+    })
   }
 }
